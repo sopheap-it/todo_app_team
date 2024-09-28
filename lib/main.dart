@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app_team/sarak/todo_ui.dart';
+import 'package:todo_app_team/sothearith/todolist_ui.dart';
 
 void main() {
   runApp(const MainApp());
@@ -15,6 +16,7 @@ class MainApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomePage(),
         '/sarakTodoUI': (context) => const SarakTodoUI(),
+        '/RithAdricUI': (context) => const RithAdricUI(),
       },
       // home: const HomePage(),
     );
@@ -47,6 +49,20 @@ class HomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const SarakTodoUI(),
+                  ),
+                );
+              },
+            ),
+            const SizedBox(height: 30),
+            const Text('Rith Adric Todo-List UI'),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              child: const Text('Go to Sothearith Todo-List UI page'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const RithAdricUI(),
                   ),
                 );
               },
