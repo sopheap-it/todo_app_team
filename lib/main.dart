@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app_team/sarak/todo_ui.dart';
+// import 'package:todo_app_team/sarak/todo_ui.dart';
+import 'package:todo_app_team/usa/usa_todo_ui.dart';
 
 void main() {
   runApp(const MainApp());
@@ -14,7 +15,7 @@ class MainApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const HomePage(),
-        '/sarakTodoUI': (context) => const SarakTodoUI(),
+        '/usaTodoUI': (context) => const UsaTodoUI(),
       },
       // home: const HomePage(),
     );
@@ -37,16 +38,31 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
+          // children: [
+          //   const Text('Sarak Todo UI'),
+          //   const SizedBox(height: 16),
+          //   ElevatedButton(
+          //     child: const Text('Go to sarak Todo UI page'),
+          //     onPressed: () {
+          //       Navigator.push(
+          //         context,
+          //         MaterialPageRoute(
+          //           builder: (context) => const SarakTodoUI(),
+          //         ),
+          //       );
+          //     },
+          //   ),
+          // ],
           children: [
-            const Text('Sarak Todo UI'),
+            const Text('Usa Todo UI'),
             const SizedBox(height: 16),
             ElevatedButton(
-              child: const Text('Go to sarak Todo UI page'),
+              child: const Text('Go to Usa Todo UI page'),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const SarakTodoUI(),
+                    builder: (context) => const UsaTodoUI(),
                   ),
                 );
               },
