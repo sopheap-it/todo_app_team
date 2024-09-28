@@ -43,7 +43,7 @@ class HomePage extends StatelessWidget {
             const Text('Sarak Todo UI'),
             const SizedBox(height: 16),
             ElevatedButton(
-              child: const Text('Go to sarak Todo UI page'),
+              child: const Text('Go to sarak Todo-List UI page'),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -57,7 +57,7 @@ class HomePage extends StatelessWidget {
             const Text('Rith Adric Todo-List UI'),
             const SizedBox(height: 16),
             ElevatedButton(
-              child: const Text('Go to Sothearith Todo-List UI page'),
+              child: const Text('Go to Rith Adric Todo-List UI page'),
               onPressed: () {
                 Navigator.push(
                   context,
