@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app_team/kheavsokhan/NewTodo.dart';
 import 'package:todo_app_team/sarak/todo_ui.dart';
 
 void main() {
@@ -38,6 +39,7 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Sarak Todo UI
             const Text('Sarak Todo UI'),
             const SizedBox(height: 16),
             ElevatedButton(
@@ -47,6 +49,21 @@ class HomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const SarakTodoUI(),
+                  ),
+                );
+              },
+            ),
+
+            // Sokhan Todo UI
+            const Text('Sokhan Todo UI'),
+            const SizedBox(height: 16),
+            ElevatedButton(
+              child: const Text('Go to Sokhan Todo UI page'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Newtodo(),
                   ),
                 );
               },
