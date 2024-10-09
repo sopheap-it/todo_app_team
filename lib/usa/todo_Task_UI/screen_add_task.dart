@@ -62,7 +62,7 @@ class ScreenAddTask extends StatelessWidget {
                   fontSize: 16,
                   color: Colors.grey[600],
                 ),
-                hintText: 'What need to be done?',
+                hintText: 'Enter task title',
                 hintStyle: TextStyle(
                   color: Colors.grey[400],
                 ),
@@ -77,6 +77,25 @@ class ScreenAddTask extends StatelessWidget {
               style: const TextStyle(fontSize: 16),
             ),
           ],
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ElevatedButton(
+          onPressed: () {
+            // Navigate to the next screen
+            // Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenTasks()));
+          },
+          style: ElevatedButton.styleFrom(
+            padding: const EdgeInsets.symmetric(vertical: 15),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+          child: const Text(
+            'Add Task',
+            style: TextStyle(fontSize: 20),
+          ),
         ),
       ),
     );
