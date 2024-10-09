@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app_team/kheavsokhan/NewTodo.dart';
+import 'package:todo_app_team/kheavsokhan/ui_news_app/screen/welcome_screen.dart';
+import 'package:todo_app_team/kheavsokhan/ui_todo_list/NewTodo.dart';
 import 'package:todo_app_team/sarak/todo_ui.dart';
 
 void main() {
@@ -12,6 +13,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
         '/': (context) => const HomePage(),
@@ -64,6 +66,17 @@ class HomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const Newtodo(),
+                  ),
+                );
+              },
+            ),
+            ElevatedButton(
+              child: const Text('Go to Sokhan News App'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const WelcomeScreen(),
                   ),
                 );
               },

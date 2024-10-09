@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  badges: ^3.1.2
 
 dev_dependencies:
   flutter_test:
@@ -18,5 +19,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/images
+    - assets/images/
+    - lib/kheavsokhan/ui_news_app/images/
 
