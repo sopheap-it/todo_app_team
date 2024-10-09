@@ -21,4 +21,6 @@ flutter:
   assets:
     - assets/images/cross.png
     - assets/images/docker.png
+    - assets/images/megazine.png
+    - assets/images/myprofile.jpg
 
