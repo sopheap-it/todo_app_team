@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app_team/sarak/todo_ui.dart';
+import 'package:todo_app_team/sothearith/docket.dart';
 
 void main() {
   runApp(const MainApp());
@@ -11,10 +11,10 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
         '/': (context) => const HomePage(),
-        '/sarakTodoUI': (context) => const SarakTodoUI(),
       },
       // home: const HomePage(),
     );
@@ -38,15 +38,15 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Sarak Todo UI'),
+            const Text('Sothearith UI'),
             const SizedBox(height: 16),
             ElevatedButton(
-              child: const Text('Go to sarak Todo UI page'),
+              child: const Text('Go to UI'),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const SarakTodoUI(),
+                    builder: (context) => const Dockets(),
                   ),
                 );
               },
