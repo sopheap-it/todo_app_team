@@ -31,7 +31,10 @@ class _NewPageState extends State<Newtask> {
       backgroundColor: const Color(0xFFFFFFFF),
       appBar: AppBar(
         backgroundColor: const Color(0xFFFFFFFF),
-        title: const Text('New Task'),
+        title: const Text('New Task',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+            )),
       ),
       body: Padding(
         padding: const EdgeInsets.only(

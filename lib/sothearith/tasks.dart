@@ -16,7 +16,7 @@ class Tasks extends StatelessWidget {
               'Tasks',
               style: TextStyle(
                   color: Colors.black,
-                  fontSize: 28,
+                  fontSize: 25,
                   fontWeight: FontWeight.bold),
             ),
             SizedBox(width: 168),
