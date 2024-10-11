@@ -37,4 +37,22 @@ List<Map<String, dynamic>> textExplore = [
     'like' : '4.2M',
     'comment' : '502K'
   },
+  {
+    'image' : 'lib/kheavsokhan/ui_news_app/images/girl_2.jpg',
+    'description' : 'The News Earth Planet Already Discoverd! Its Near The Neptune',
+    'profile' : 'lib/kheavsokhan/ui_news_app/images/cnbc.png',
+    'date' : 'March 23',
+    'name' : 'Cnbc News',
+    'like' : '4.2M',
+    'comment' : '502K'
+  },
+  {
+    'image' : 'lib/kheavsokhan/ui_news_app/images/girl_3.jpg',
+    'description' : 'The News Earth Planet Already Discoverd! Its Near The Neptune',
+    'profile' : 'lib/kheavsokhan/ui_news_app/images/cnbc.png',
+    'date' : 'March 23',
+    'name' : 'Cnbc News',
+    'like' : '4.2M',
+    'comment' : '502K'
+  },
 ];

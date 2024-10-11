@@ -15,6 +15,7 @@ class ExploreCardWidget extends StatelessWidget {
         Container(
           width: MediaQuery.of(context).size.width / 1.1,
           height: 340,
+          margin: const EdgeInsets.only(bottom: 20),
           decoration: BoxDecoration(
             color: AppColor.bg_2,
             borderRadius: BorderRadius.circular(20)

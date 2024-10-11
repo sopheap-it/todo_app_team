@@ -10,6 +10,7 @@ class BottomNavigationBarWidget extends StatefulWidget {
 }
 
 class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
+
   int _currentIndex = 0;
 
   final List<Widget> body = const [
