@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app_team/kheavsokhan/ui_news_app/screen/explore_screen.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/screen/home_screen.dart';
 
 class BottomNavigationBarWidget extends StatefulWidget {
@@ -13,7 +14,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
 
   final List<Widget> body = const [
     HomeScreen(),
-    Icon(Icons.explore),
+    ExploreScreen(),
     Icon(Icons.bookmark),
     Icon(Icons.settings),
   ];
@@ -44,7 +45,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.bookmark),
-            label: 'Bookmark',
+            label: 'Save',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),

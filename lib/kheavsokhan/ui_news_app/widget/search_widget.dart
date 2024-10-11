@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/style/colors.dart';
 
 class SearchWidget extends StatelessWidget {
-  const SearchWidget({super.key});
+
+  final String text;
+
+  const SearchWidget({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +22,7 @@ class SearchWidget extends StatelessWidget {
           child: Center(
             child: TextFormField(
               decoration: InputDecoration(
-                hintText: "Let's see what happened to day",
+                hintText: text,
                 hintStyle: TextStyle(
                   color: AppColor.text_2,
                 ),

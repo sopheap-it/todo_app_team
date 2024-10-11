@@ -4,7 +4,7 @@ import 'package:todo_app_team/kheavsokhan/ui_news_app/style/fonts.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/widget/home_widget/breaking_new_card_widget.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/widget/home_widget/button_trending_widget.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/widget/home_widget/news_scroll_widget.dart';
-import 'package:todo_app_team/kheavsokhan/ui_news_app/widget/home_widget/search_widget.dart';
+import 'package:todo_app_team/kheavsokhan/ui_news_app/widget/search_widget.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/widget/home_widget/two_text_widget.dart';
 import '../data/data_breaking_new.dart';
 import '../data/news_scroll_data.dart';
@@ -99,7 +99,7 @@ class HomeScreen extends StatelessWidget {
               // search box
               const Row(
                 children: [
-                  const SearchWidget(),
+                  const SearchWidget(text: "Let's see what happened today",),
                 ],
               ),
               const SizedBox(height: 20,),
@@ -130,15 +130,17 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height:
               40,),
-              // Container(
-              //   padding: const EdgeInsets.all(8.0),
-              //   child: ListView.builder(
-              //     itemCount: textNewsScroll.length,
-              //     itemBuilder: (context, index) {
-              //       return NewsScrollWidget(newsDataList: textNewsScroll[index]);
-              //     },
-              //   ),
-              // ),
+              Container(
+                padding: const EdgeInsets.all(8.0),
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  physics: const ClampingScrollPhysics(),
+                  itemCount: textNewsScroll.length,
+                  itemBuilder: (context, index) {
+                    return NewsScrollWidget(newsDataList: textNewsScroll[index]);
+                  },
+                ),
+              ),
             ],
           ),
         ),
