@@ -11,6 +11,7 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+
   bool _isSwitch = true;
 
   void _toggleSwitch(bool value) {

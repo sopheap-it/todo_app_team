@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/screen/explore_screen.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/screen/home_screen.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/screen/profile_screen.dart';
+import 'package:todo_app_team/kheavsokhan/ui_news_app/screen/setting_screen.dart';
 
 class BottomNavigationBarWidget extends StatefulWidget {
   const BottomNavigationBarWidget({super.key});
@@ -20,7 +21,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
     HomeScreen(),
     ExploreScreen(),
     ProfileScreen(),
-    Icon(Icons.settings),
+    SettingScreen(),
   ];
 
   @override

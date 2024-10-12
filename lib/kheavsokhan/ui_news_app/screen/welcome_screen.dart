@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/style/colors.dart';
+import 'package:todo_app_team/kheavsokhan/ui_news_app/style/fonts.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/widget/BottomNavigationBar_widget.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/widget/home_widget/button_widget.dart';
 
-import '../style/fonts.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -17,7 +17,8 @@ class WelcomeScreen extends StatelessWidget {
           Image.asset(
             width: double.infinity,
             height: double.infinity,
-            "lib/kheavsokhan/ui_news_app/images/welcome.jpg", fit: BoxFit.cover,
+            "lib/kheavsokhan/ui_news_app/images/welcome.jpg",
+            fit: BoxFit.cover, // Cover the entire container
           ),
           Padding(
             padding: const EdgeInsets.only(left: 30, right: 30, bottom: 20),
