@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app_team/usa/meta_ui.dart/home_screen.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -50,7 +51,7 @@ class HomeTodo extends StatelessWidget {
                   ),
                   softWrap: true,
                 ),
-                SizedBox(height: 20,),
+                SizedBox(height: 10,),
                 Text(
                   "Here see watch something in the world using Tidings and share it with your family or friends.",
                   textAlign: TextAlign.start, 
@@ -60,18 +61,18 @@ class HomeTodo extends StatelessWidget {
                   ),
                   softWrap: true,
                 ),
-                SizedBox(height: 20,),
+                SizedBox(height: 10,),
               ],
             ),
           ),
 
           Positioned(
-            bottom: 20,
+            bottom: 10,
             left: 20,
             right: 20,
             child: ElevatedButton(
               onPressed: () {
-                 
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
               },
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 11),

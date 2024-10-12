@@ -8,15 +8,9 @@ class TaskScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
-        title: GestureDetector(
-          child: const Text(
-            "Task",
-            style: TextStyle(fontSize: 26, fontWeight: FontWeight.w900),
-          ),
-          onTap: () {
-            Navigator.pop(context);
-          },
+        title: const Text(
+          "Task",
+          style: TextStyle(fontSize: 26, fontWeight: FontWeight.w900),
         ),
         actions: [
           IconButton(
@@ -44,16 +38,17 @@ class TaskScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Expanded(
+                    SizedBox(
+                      width: 200,
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
                             'Declutter desk and organize drawers',
                             style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 18),
+                            fontWeight: FontWeight.w500, fontSize: 18),
                             softWrap: true,
-                            overflow: TextOverflow.visible,
+                            overflow: TextOverflow.ellipsis,
                           ),
                           SizedBox(height: 20),
                           Text("2 Oct 2024 11:43 AM"),
@@ -61,129 +56,89 @@ class TaskScreen extends StatelessWidget {
                       ),
                     ),
                     // Icon column
-                    Column(
-                      children: [Icon(Icons.check_outlined)],
-                    )
+                    Icon(Icons.check_outlined)
                   ],
                 ),
               ),
             ),
           ),
           // Second column
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 30),
-            child: Container(
-              height: 110,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.grey),
-              ),
-              child: const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          Container(
+            margin: const EdgeInsets.symmetric(vertical: 7, horizontal: 30),
+            height: 110,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: Colors.grey),
+            ),
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+              child: Expanded(
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Research and try a new recipe for dinner at night',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 18),
-                            softWrap: true,
-                            overflow: TextOverflow.visible,
-                          ),
-                          SizedBox(height: 20),
-                          Text("10 Oct 2024 8:23 AM"),
-                        ],
-                      ),
+                    Text(
+                      'Research and try a new recipe for dinner at night',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 18),
+                      softWrap: true,
+                      overflow: TextOverflow.visible,
                     ),
-                    // Icon column
-                    SizedBox(
-                      width: 55,
-                    )
+                    SizedBox(height: 20),
+                    Text("10 Oct 2024 8:23 AM"),
                   ],
                 ),
               ),
             ),
           ),
           // Third column
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 30),
-            child: Container(
-              height: 110,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.grey),
-              ),
-              child: const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Water and care for your indoor plants',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 18),
-                            softWrap: true,
-                            overflow: TextOverflow.visible,
-                          ),
-                          SizedBox(height: 20),
-                          Text("15 Oct 2024 3:34 PM"),
-                        ],
-                      ),
-                    ),
-                    // Icon column
-                    SizedBox(
-                      width: 55,
-                    )
-                  ],
-                ),
+          Container(
+            margin: const EdgeInsets.symmetric(vertical: 7, horizontal: 30),
+            height: 110,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: Colors.grey),
+            ),
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Water and care for your indoor plants test',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500, fontSize: 18),
+                    softWrap: true,
+                    overflow: TextOverflow.visible,
+                  ),
+                  SizedBox(height: 20),
+                  Text("15 Oct 2024 3:34 PM"),
+                ],
               ),
             ),
           ),
           // Fourth column
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 7, horizontal: 30),
-            child: Container(
-              height: 110,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.grey),
-              ),
-              child: const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          Container(
+            margin: const EdgeInsets.symmetric(vertical: 7, horizontal: 30),
+            height: 110,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: Colors.grey),
+            ),
+            child: const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+              child: Expanded(
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Write down the personal goals for the upcoming month',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 18),
-                            softWrap: true,
-                            overflow: TextOverflow.visible,
-                          ),
-                          SizedBox(height: 20),
-                          Text("20 Oct 2024 9:23 PM"),
-                        ],
-                      ),
+                    Text(
+                      'Write down the personal goals for the upcoming month',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500, fontSize: 18),
+                      softWrap: true,
+                      overflow: TextOverflow.visible,
                     ),
-                    // Icon column
-                    SizedBox(
-                      width: 55,
-                    )
+                    SizedBox(height: 20),
+                    Text("20 Oct 2024 9:23 PM"),
                   ],
                 ),
               ),

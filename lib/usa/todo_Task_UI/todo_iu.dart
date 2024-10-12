@@ -24,7 +24,7 @@ class HomeTodo extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: GestureDetector(
-          onTap: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>TaskScreen()));},
+          onTap: () {Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>TaskScreen()));},
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
