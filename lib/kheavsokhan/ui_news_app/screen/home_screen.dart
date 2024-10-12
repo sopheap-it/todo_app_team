@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart' as badges;
+import 'package:todo_app_team/kheavsokhan/ui_news_app/data/data_breaking_new.dart';
+import 'package:todo_app_team/kheavsokhan/ui_news_app/data/news_scroll_data.dart';
+import 'package:todo_app_team/kheavsokhan/ui_news_app/data/text_trending.dart';
+import 'package:todo_app_team/kheavsokhan/ui_news_app/screen/profile_screen.dart';
+import 'package:todo_app_team/kheavsokhan/ui_news_app/style/colors.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/style/fonts.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/widget/home_widget/breaking_new_card_widget.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/widget/home_widget/button_trending_widget.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/widget/home_widget/news_scroll_widget.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/widget/search_widget.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/widget/home_widget/two_text_widget.dart';
-import '../data/data_breaking_new.dart';
-import '../data/news_scroll_data.dart';
-import '../data/text_trending.dart';
-import '../style/colors.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -18,31 +19,23 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColor.bg_1,
-      // profile and notification
       appBar: AppBar(
         backgroundColor: AppColor.bg_1,
         automaticallyImplyLeading: false,
         title: Row(
           children: [
+            // profile picture
             GestureDetector(
               onTap: () {
-
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ProfileScreen()));
               },
-              child: Container(
-                width: 40,
-                height: 40,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(50)
-                ),
-                child: ClipOval(
-                  child: Image.asset(
-                    'lib/kheavsokhan/ui_news_app/images/profile.jpg',
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
+                child: const CircleAvatar(
+                  backgroundImage: AssetImage("lib/kheavsokhan/ui_news_app/images/profile.png"),  // Your image provider (AssetImage, NetworkImage, etc.)
+                )
+
             ),
             const SizedBox(width: 10),
+            // name profile
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -65,6 +58,7 @@ class HomeScreen extends StatelessWidget {
             )
           ],
         ),
+        // icon notification
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),
@@ -99,10 +93,11 @@ class HomeScreen extends StatelessWidget {
               // search box
               const Row(
                 children: [
-                  const SearchWidget(text: "Let's see what happened today",),
+                  SearchWidget(text: "Let's see what happened today",),
                 ],
               ),
               const SizedBox(height: 20,),
+              // text breaking new and see all
               TwoTextWidget(bigText: "Breaking News !", smallText: "See all", func: () => Navigator.pushNamed(context, "")),
               const SizedBox(height: 20,),
               // news card
@@ -115,8 +110,10 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 40,),
+              // text trending and see all
               TwoTextWidget(bigText: "Trending Right Now", smallText: "See all", func: () => Navigator.pushNamed(context, "")),
               const SizedBox(height: 20,),
+              // box text trending
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -128,8 +125,8 @@ class HomeScreen extends StatelessWidget {
                   }).toList(),
                 ),
               ),
-              const SizedBox(height:
-              40,),
+              const SizedBox(height: 40,),
+              // list news
               Container(
                 padding: const EdgeInsets.all(8.0),
                 child: ListView.builder(

@@ -15,14 +15,16 @@ class ExploreScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColor.bg_1,
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: AppColor.bg_1,
-        centerTitle: true,
+        // title screen
         title: Text(
           "Explore",
           style: AppFont.textStyleOne(
             fontWeight: FontWeight.bold,
           ),
         ),
+        // icon notification
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),
@@ -55,59 +57,54 @@ class ExploreScreen extends StatelessWidget {
             child: Column(
               children: [
                 const SizedBox(height: 20,),
+                // button search
                 const SearchWidget(text: "Let's see what happened today",),
                 const SizedBox(
                   height: 20,
                 ),
-                Row(
-                  children: [
-                    Flexible(
-                      child: RichText(
-                        text: TextSpan(
-                          children: [
-                            TextSpan(
-                              text: "Read More ",
-                              style: TextStyle(
-                                fontSize: 30,
-                                  fontWeight: FontWeight.w500,
-                                  color: AppColor.text_3
-                              ),
-                            ),
-                            TextSpan(
-                              text: "News",
-                              style: TextStyle(
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.w500,
-                                  color: AppColor.text_4
-                              ),
-                            ),
-                            TextSpan(
-                              text: " and See What happen On ",
-                              style: TextStyle(
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.w500,
-                                  color: AppColor.text_3
-                              ),
-                            ),
-                            TextSpan(
-                              text: "Another World",
-                              style: TextStyle(
-                                  fontSize: 30,
-                                  fontWeight: FontWeight.w500,
-                                  color: AppColor.text_4
-                              ),
-                            ),
-                          ],
+                // text description for screen
+                RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "Read More ",
+                        style: TextStyle(
+                          fontSize: 30,
+                            fontWeight: FontWeight.w500,
+                            color: AppColor.text_3
                         ),
-                        maxLines: 3,
-                        overflow: TextOverflow.ellipsis,
                       ),
-                    ),
-                  ],
+                      TextSpan(
+                        text: "News",
+                        style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.w500,
+                            color: AppColor.text_4
+                        ),
+                      ),
+                      TextSpan(
+                        text: " and See What happen On ",
+                        style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.w500,
+                            color: AppColor.text_3
+                        ),
+                      ),
+                      TextSpan(
+                        text: "Another World",
+                        style: TextStyle(
+                            fontSize: 30,
+                            fontWeight: FontWeight.w500,
+                            color: AppColor.text_4
+                        ),
+                      ),
+                    ],
+                  ),
+                  maxLines: 3,
+                  overflow: TextOverflow.ellipsis,
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                const SizedBox(height: 20,),
+                // button exclusive and live
                 Row(
                   children: [
                     TweenButton(
@@ -121,11 +118,12 @@ class ExploreScreen extends StatelessWidget {
                         isText: false,
                         isButton: false,
                         onTap: () {},
-                        text: "Exclusive"
+                        text: "Live"
                     ),
                   ],
                 ),
                 const SizedBox(height: 20,),
+                // list of new
                 ListView.builder(
                   shrinkWrap: true,
                   physics: const ClampingScrollPhysics(),
