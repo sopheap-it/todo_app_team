@@ -9,6 +9,7 @@ class Tasks extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFFFFFFF),
       appBar: AppBar(
+        automaticallyImplyLeading: false, // Hide Back arrow
         backgroundColor: const Color(0xFFFFFFFF),
         title: const Row(
           children: [

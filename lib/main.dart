@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:todo_app_team/sothearith/docket.dart';
+import 'package:todo_app_team/sothearith/profile.dart';
 
 void main() {
   runApp(const MainApp());
@@ -38,7 +39,7 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Sothearith UI'),
+            const Text('Docket UI str'),
             const SizedBox(height: 16),
             ElevatedButton(
               child: const Text('Go to UI'),
@@ -51,6 +52,22 @@ class HomePage extends StatelessWidget {
                 );
               },
             ),
+            const Text('Profile Setting UI str'),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: const Color.fromARGB(255, 77, 125, 255),
+              ),
+              child: const Text('Go to profile setting'),
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ProfileSetting(),
+                  ),
+                );
+              },
+            )
           ],
         ),
       ),
