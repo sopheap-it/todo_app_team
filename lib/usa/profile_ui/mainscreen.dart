@@ -42,18 +42,17 @@ class _ProfileState extends State<Profile> {
                     children: [
                       CircleAvatar(
                         backgroundImage:
-                            AssetImage('assets/images/myprofile.jpg'),
+                            AssetImage('assets/images/myprofile.jpg',),
                         radius: 50,
                       ),
-                      SizedBox(height: 10),
                       Text(
                         "Coffeestories",
                         style:
                             TextStyle(fontSize: 20, fontWeight: FontWeight.bold,),
                       ),
-                      SizedBox(height: 5),
+                      SizedBox(height: 1),
                       Text("yazu.12sleep@icloud.com",style: TextStyle(color: Colors.grey.shade600),),
-                      SizedBox(height: 7),
+                      SizedBox(height: 3),
                       ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
@@ -66,10 +65,10 @@ class _ProfileState extends State<Profile> {
                   ),
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 10,
                 ),
                 Text("Inventories",
-                    style: TextStyle(color: Colors.grey.shade700, fontSize: 16)),
+                    style: TextStyle(color: Colors.grey.shade700, fontSize: 14)),
                 Card(
                   child: Column(mainAxisSize: MainAxisSize.min, children: [
                     ListTile(
@@ -91,7 +90,7 @@ class _ProfileState extends State<Profile> {
                           ),
                         ],
                       ),
-                      trailing: Icon(Icons.arrow_right_alt_sharp),
+                      trailing: Image.asset('assets/images/right-arrow.png',width: 20,),
                     ),
                     Divider(
                       indent: 20,
@@ -101,15 +100,15 @@ class _ProfileState extends State<Profile> {
                     ListTile(
                       leading: Icon(Icons.support_rounded),
                       title: Text('Support'),
-                      trailing: Icon(Icons.arrow_right_alt_sharp),
+                      trailing: Image.asset('assets/images/right-arrow.png',width: 20,),
                     ),
                   ]),
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 10,
                 ),
-                Text("Preferences", style: TextStyle(color: Colors.grey.shade700, fontSize: 16)),
-                Card(
+                Text("Preferences", style: TextStyle(color: Colors.grey.shade700, fontSize: 14)),
+                 Card(
                   child: Column(mainAxisSize: MainAxisSize.min, children: [
                     ListTile(
                       leading:const Icon(Icons.dark_mode),
@@ -151,7 +150,7 @@ class _ProfileState extends State<Profile> {
                       child: ListTile(
                         leading: Icon(Icons.copy_rounded),
                         title: Text('PIN Code'),
-                        trailing: Icon(Icons.arrow_right_alt_sharp),
+                        trailing: Image.asset('assets/images/right-arrow.png',width: 20,)
                       ),
                     ),
                     Divider(
@@ -181,11 +180,11 @@ class _ProfileState extends State<Profile> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home_sharp),
-            label: '',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.lock_reset_rounded),
-            label: '',
+            label: 'History',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
