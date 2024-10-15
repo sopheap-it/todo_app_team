@@ -8,7 +8,8 @@ class ProfileSetting extends StatefulWidget {
 }
 
 class _ProfileSettingState extends State<ProfileSetting> {
-  bool isSwitched = false;
+  bool isSwitchentf = false;
+  bool isSwitchefac = false;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +39,7 @@ class _ProfileSettingState extends State<ProfileSetting> {
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  'Choeun Sothearith',
+                  'Rith Adric',
                   style: TextStyle(
                     color: Colors.black,
                     fontSize: 18,
@@ -230,10 +231,10 @@ class _ProfileSettingState extends State<ProfileSetting> {
                                 ],
                               ),
                               Switch(
-                                value: isSwitched,
+                                value: isSwitchentf,
                                 onChanged: (value) {
                                   setState(() {
-                                    isSwitched = value; // Update state
+                                    isSwitchentf = value; // Update state
                                   });
                                 },
                                 activeColor: Colors.green,
@@ -282,10 +283,10 @@ class _ProfileSettingState extends State<ProfileSetting> {
                                 ],
                               ),
                               Switch(
-                                value: isSwitched,
+                                value: isSwitchefac,
                                 onChanged: (value) {
                                   setState(() {
-                                    isSwitched = value; // Update state
+                                    isSwitchefac = value; // Update state
                                   });
                                 },
                                 activeColor: Colors.green,
