@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app_team/kheavsokhan/calculator/calculator.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/screen/welcome_screen.dart';
 import 'package:todo_app_team/kheavsokhan/ui_todo_list/NewTodo.dart';
 import 'package:todo_app_team/sarak/todo_ui.dart';
@@ -77,6 +78,17 @@ class HomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const WelcomeScreen(),
+                  ),
+                );
+              },
+            ),
+            ElevatedButton(
+              child: const Text('Go to Sokhan Calculator'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Calculator(),
                   ),
                 );
               },
