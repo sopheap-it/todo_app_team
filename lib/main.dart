@@ -1,11 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:todo_app_team/kheavsokhan/calculator/calculator.dart';
+import 'package:todo_app_team/kheavsokhan/provider/counter_model.dart';
+import 'package:todo_app_team/kheavsokhan/provider/home_provider.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/screen/welcome_screen.dart';
 import 'package:todo_app_team/kheavsokhan/ui_todo_list/NewTodo.dart';
 import 'package:todo_app_team/sarak/todo_ui.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => CounterModel(),
+      child: const MainApp(),
+    ),
+  );
 }
 
 class MainApp extends StatelessWidget {
@@ -89,6 +97,17 @@ class HomePage extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) => const Calculator(),
+                  ),
+                );
+              },
+            ),
+            ElevatedButton(
+              child: const Text('Go to Sokhan Provider'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const HomeProvider(),
                   ),
                 );
               },
