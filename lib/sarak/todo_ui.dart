@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'exams_screen.dart';
+import 'calculator/homeSceen.dart';
+// import 'exams_screen.dart';
 import 'package:todo_app_team/sarak/slpashscreen.dart';
 import 'package:todo_app_team/sarak/tasks.dart';
 
@@ -29,15 +30,20 @@ class SarakTodoUI extends StatelessWidget {
             const Text('StudyPal', style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold, color: Color(0xFFB39DDB))),
             const Text('Your pocket guide for school.', style: TextStyle(fontSize: 12, color: Colors.grey)),
             const SizedBox(height: 40),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                buildButton('Begin', const ExamScreen()),
-                const SizedBox(width: 10),
-                buildButton('Task', TaskListScreen()),
-                const SizedBox(width: 10),
-                buildButton('Get Started', SplashScreen()),
-              ],
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // buildButton('Begin', const ExamScreen()),
+                  const SizedBox(width: 10),
+                  buildButton('Task', TaskListScreen()),
+                  const SizedBox(width: 10),
+                  buildButton('Get Started', SplashScreen()),
+                  const SizedBox(width: 10),
+                  buildButton('Calculator', CalculatorApp()),
+                ],
+              ),
             ),
           ],
         ),

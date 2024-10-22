@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app_team/sarak/profile.dart';
 import 'NextScreen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -77,7 +78,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>  NextScreen()),
+                    MaterialPageRoute(builder: (context) =>  ProfileScreen()),
                   );
                 },
                 child: const Text(
