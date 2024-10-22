@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app_team/sarak/profile.dart';
+import 'package:todo_app_team/sarak/widget/list_widget.dart';
 import 'calculator/homeSceen.dart';
-// import 'exams_screen.dart';
-import 'package:todo_app_team/sarak/slpashscreen.dart';
 import 'package:todo_app_team/sarak/tasks.dart';
+
+import 'exams_screen.dart';
 
 class SarakTodoUI extends StatelessWidget {
   const SarakTodoUI({super.key});
@@ -35,13 +37,14 @@ class SarakTodoUI extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // buildButton('Begin', const ExamScreen()),
+                  buildButton('Begin', const ExamScreen()),
                   const SizedBox(width: 10),
                   buildButton('Task', TaskListScreen()),
                   const SizedBox(width: 10),
-                  buildButton('Get Started', SplashScreen()),
+                  buildButton('Profile', ProfileScreen()),
                   const SizedBox(width: 10),
                   buildButton('Calculator', CalculatorApp()),
+
                 ],
               ),
             ),
