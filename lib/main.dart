@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:todo_app_team/kheavsokhan/calculator/calculator.dart';
 import 'package:todo_app_team/kheavsokhan/provider/counter_model.dart';
 import 'package:todo_app_team/kheavsokhan/provider/home_provider.dart';
+import 'package:todo_app_team/kheavsokhan/testloop/show_list.dart';
 import 'package:todo_app_team/kheavsokhan/ui_news_app/screen/welcome_screen.dart';
 import 'package:todo_app_team/kheavsokhan/ui_todo_list/NewTodo.dart';
 import 'package:todo_app_team/sarak/todo_ui.dart';
@@ -102,12 +103,12 @@ class HomePage extends StatelessWidget {
               },
             ),
             ElevatedButton(
-              child: const Text('Go to Sokhan Provider'),
+              child: const Text('Go to Sokhan Loop'),
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const HomeProvider(),
+                    builder: (context) => const ShowList(),
                   ),
                 );
               },
